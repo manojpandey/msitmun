@@ -32,9 +32,19 @@ body {
     color: #FFD800;
 }
 
-.list-inline > li > a:hover,
-.list-inline > li > a:focus {
-    color: #00FF18;
+.list-inline > li:nth-child(1) > a:hover,
+.list-inline > li:nth-child(1) > a:focus {
+    color: #3b5999;
+}
+
+.list-inline > li:nth-child(2) > a:hover,
+.list-inline > li:nth-child(2) > a:focus {
+    color: #55acee;
+}
+
+.list-inline > li:nth-child(3) > a:hover,
+.list-inline > li:nth-child(3) > a:focus {
+    color: #3f729b;
 }
 
 #particles-js {
@@ -42,8 +52,8 @@ body {
     position: absolute;
     width: 100%;
     height: 99.7%;
-    background-color: #216b62;
-    background-image: url("");
+    /*background-color: #216b62;*/
+    background-image: url("../Images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
