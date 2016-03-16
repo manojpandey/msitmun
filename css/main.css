@@ -5,6 +5,11 @@ body {
     font-family: 'Poiret One', cursive;
 }
 
+a {
+  color: #a8ae7e;
+  text-decoration: none;
+}
+
 .intro {
     height: 100%;
     width: 100%;
@@ -45,6 +50,143 @@ body {
 .list-inline > li:nth-child(3) > a:hover,
 .list-inline > li:nth-child(3) > a:focus {
     color: #3f729b;
+}
+
+.cd-text-replace {
+  /* replace text with image */
+  color: transparent;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cd-nav-trigger {
+  position: absolute;
+  z-index: 4;
+  top: 24px;
+  left: 5%;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.cd-nav-trigger .cd-icon,
+.cd-nav-trigger .cd-icon::before,
+.cd-nav-trigger .cd-icon::after {
+  /* menu icon created in CSS */
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 2px;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.no-touch .cd-nav-trigger:hover {
+  background-color: black;
+}
+
+.cd-nav-trigger .cd-icon {
+  /* middle line of the menu icon */
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+  -moz-transition: -moz-transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.cd-nav-trigger .cd-icon::before, .cd-nav-trigger .cd-icon::after {
+  /* upper and lower lines of the menu icon */
+  content: '';
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.cd-nav-trigger .cd-icon::before {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  -o-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.cd-nav-trigger .cd-icon::after {
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  transform: translateY(6px);
+}
+
+.cd-nav-trigger.nav-visible .cd-icon {
+  /* user opens the navigation - transform the icon into an arrow */
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.cd-nav-trigger.nav-visible .cd-icon::after {
+  -webkit-transform: translateX(5px) translateY(3px) rotate(-45deg) scaleX(0.5);
+  -moz-transform: translateX(5px) translateY(3px) rotate(-45deg) scaleX(0.5);
+  -ms-transform: translateX(5px) translateY(3px) rotate(-45deg) scaleX(0.5);
+  -o-transform: translateX(5px) translateY(3px) rotate(-45deg) scaleX(0.5);
+  transform: translateX(5px) translateY(3px) rotate(-45deg) scaleX(0.5);
+}
+.cd-nav-trigger.nav-visible .cd-icon::before {
+  -webkit-transform: translateX(5px) translateY(-3px) rotate(45deg) scaleX(0.5);
+  -moz-transform: translateX(5px) translateY(-3px) rotate(45deg) scaleX(0.5);
+  -ms-transform: translateX(5px) translateY(-3px) rotate(45deg) scaleX(0.5);
+  -o-transform: translateX(5px) translateY(-3px) rotate(45deg) scaleX(0.5);
+  transform: translateX(5px) translateY(-3px) rotate(45deg) scaleX(0.5);
+}
+@media only screen and (min-width: 1024px) {
+  .cd-nav-trigger.nav-visible .cd-icon {
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+    -moz-transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+    -ms-transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+    -o-transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+    transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+  }
+  .cd-nav-trigger.nav-visible .cd-icon::after {
+    -webkit-transform: translateX(-5px) translateY(3px) rotate(45deg) scaleX(0.5);
+    -moz-transform: translateX(-5px) translateY(3px) rotate(45deg) scaleX(0.5);
+    -ms-transform: translateX(-5px) translateY(3px) rotate(45deg) scaleX(0.5);
+    -o-transform: translateX(-5px) translateY(3px) rotate(45deg) scaleX(0.5);
+    transform: translateX(-5px) translateY(3px) rotate(45deg) scaleX(0.5);
+  }
+  .cd-nav-trigger.nav-visible .cd-icon::before {
+    -webkit-transform: translateX(-5px) translateY(-3px) rotate(-45deg) scaleX(0.5);
+    -moz-transform: translateX(-5px) translateY(-3px) rotate(-45deg) scaleX(0.5);
+    -ms-transform: translateX(-5px) translateY(-3px) rotate(-45deg) scaleX(0.5);
+    -o-transform: translateX(-5px) translateY(-3px) rotate(-45deg) scaleX(0.5);
+    transform: translateX(-5px) translateY(-3px) rotate(-45deg) scaleX(0.5);
+  }
 }
 
 #particles-js {
