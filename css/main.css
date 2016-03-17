@@ -51,6 +51,13 @@ main {
     right: 0;
 }
 
+.safari .intro {
+    height: 100%;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
 .intro-body {
     height: 100%;
     width: 100%;
