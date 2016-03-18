@@ -11,7 +11,8 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Poiret One', cursive;
-    overflow-x: hidden;
+    overflow: hidden;
+    background-color: #000000;
 }
 
 html * {
@@ -30,7 +31,6 @@ main {
     -webkit-overflow-scrolling: touch;
     padding: 200px 5%;
     background-color: #000000;
-    overflow-y: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transition: -webkit-transform 0.7s;
@@ -103,7 +103,7 @@ main {
     transform: translateX(100%);
 }
 
-.cd-nav-trigger {
+.nav-trigger {
     position: fixed;
     z-index: 3;
     left: 5%;
@@ -120,7 +120,7 @@ main {
     transition: transform 0.5s;
 }
 
-.cd-nav-trigger .cd-nav-icon {
+.nav-trigger .nav-icon {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -136,8 +136,8 @@ main {
     background-color: #ffffff;
 }
 
-.cd-nav-trigger .cd-nav-icon::before,
-.cd-nav-trigger .cd-nav-icon:after {
+.nav-trigger .nav-icon::before,
+.nav-trigger .nav-icon:after {
     content: '';
     position: absolute;
     top: 0;
@@ -157,7 +157,7 @@ main {
     transition: transform 0.5s, width 0.5s, top 0.3s;
 }
 
-.cd-nav-trigger .cd-nav-icon::before {
+.nav-trigger .nav-icon::before {
     -webkit-transform-origin: right top;
     -moz-transform-origin: right top;
     -ms-transform-origin: right top;
@@ -170,7 +170,7 @@ main {
     transform: translateY(-6px);
 }
 
-.cd-nav-trigger .cd-nav-icon::after {
+.nav-trigger .nav-icon::after {
     -webkit-transform-origin: right bottom;
     -moz-transform-origin: right bottom;
     -ms-transform-origin: right bottom;
@@ -183,35 +183,35 @@ main {
     transform: translateY(6px);
 }
 
-.no-touch .cd-nav-trigger:hover .cd-nav-icon::after {
+.no-touch .nav-trigger:hover .nav-icon::after {
     top: 2px;
 }
 
-.no-touch .cd-nav-trigger:hover .cd-nav-icon::before {
+.no-touch .nav-trigger:hover .nav-icon::before {
     top: -2px;
 }
 
-.cd-nav-trigger svg {
+.nav-trigger svg {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.cd-nav-trigger circle {
+.nav-trigger circle {
     -webkit-transition: stroke-dashoffset 0.4s 0s;
     -moz-transition: stroke-dashoffset 0.4s 0s;
     transition: stroke-dashoffset 0.4s 0s;
 }
 
-.navigation-is-open .cd-nav-trigger .cd-nav-icon::after,
-.navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
+.navigation-is-open .nav-trigger .nav-icon::after,
+.navigation-is-open .nav-trigger .nav-icon::before {
     width: 50%;
     -webkit-transition: -webkit-transform 0.5s, width 0.5s;
     -moz-transition: -moz-transform 0.5s, width 0.5s;
     transition: transform 0.5s, width 0.5s;
 }
 
-.navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
+.navigation-is-open .nav-trigger .nav-icon::before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -219,7 +219,7 @@ main {
     transform: rotate(45deg);
 }
 
-.navigation-is-open .cd-nav-trigger .cd-nav-icon::after {
+.navigation-is-open .nav-trigger .nav-icon::after {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -227,12 +227,12 @@ main {
     transform: rotate(-45deg);
 }
 
-.no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::after,
-.no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::before {
+.no-touch .navigation-is-open .nav-trigger:hover .nav-icon::after,
+.no-touch .navigation-is-open .nav-trigger:hover .nav-icon::before {
     top: 0;
 }
 
-.navigation-is-open .cd-nav-trigger circle {
+.navigation-is-open .nav-trigger circle {
     stroke-dashoffset: 0;
     -webkit-transition: stroke-dashoffset 0.4s 0.3s;
     -moz-transition: stroke-dashoffset 0.4s 0.3s;
@@ -240,26 +240,27 @@ main {
 }
 
 @media only screen and (min-width: 1170px) {
-    .cd-nav-trigger {
+    .nav-trigger {
         top: 40px;
     }
 }
 
-.cd-nav {
-    position: fixed;
+.nav {
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: #090C17;
+    overflow-y: scroll;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
     -moz-transition: visibility 0s 0.7s;
     transition: visibility 0s 0.7s;
 }
 
-.cd-nav .cd-navigation-wrapper {
+.nav .navigation-wrapper {
     height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -284,14 +285,14 @@ main {
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
 }
 
-.navigation-is-open .cd-nav {
+.navigation-is-open .nav {
     visibility: visible;
     -webkit-transition: visibility 0s 0s;
     -moz-transition: visibility 0s 0s;
     transition: visibility 0s 0s;
 }
 
-.navigation-is-open .cd-nav .cd-navigation-wrapper {
+.navigation-is-open .nav .navigation-wrapper {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -305,7 +306,7 @@ main {
     transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
 
-.cd-nav h2 {
+.nav h2 {
     position: relative;
     margin-bottom: 1.7em;
     font-size: 1.3rem;
@@ -314,7 +315,7 @@ main {
     text-transform: uppercase;
 }
 
-.cd-nav h2::after {
+.nav h2::after {
     content: '';
     position: absolute;
     left: 0;
@@ -324,94 +325,101 @@ main {
     background-color: currentColor;
 }
 
-.cd-nav .cd-primary-nav {
+.nav .primary-nav {
     margin-top: 60px;
 }
 
-.cd-nav .cd-primary-nav li {
+.nav .primary-nav li {
     margin: 1.6em 0;
 }
 
-.cd-nav .cd-primary-nav a {
+.nav .primary-nav a {
     font-family: 'Poiret One', cursive;
     font-size: 2.4rem;
     color: rgba(255, 255, 255, 0.3);
     display: inline-block;
 }
 
-.cd-nav .cd-primary-nav a.selected {
-    color: #ffffff;
-}
-
-.no-touch .cd-nav .cd-primary-nav a:hover {
+.no-touch .nav .primary-nav a:hover {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
 }
 
-.cd-nav .cd-contact-info {
+.nav .contact-info {
     margin-top: 80px;
 }
 
-.cd-nav .cd-contact-info li {
+.nav .contact-info li {
     font-family: 'Poiret One';
     margin-bottom: 1.5em;
     line-height: 1.2;
     color: rgba(255, 255, 255, 0.3);
 }
 
-.cd-nav .cd-contact-info a {
+.nav .contact-info a {
     color: #ffffff;
 }
 
-.cd-nav .cd-contact-info span {
+.nav .contact-info span {
     display: block;
 }
 
-.cd-nav .cd-contact-info li,
-.cd-nav .cd-contact-info a,
-.cd-nav .cd-contact-info span {
+.nav .contact-info li,
+.nav .contact-info a,
+.nav .contact-info span {
     font-size: 1.6rem;
 }
 
 @media only screen and (min-width: 1170px) {
-    .cd-nav .cd-navigation-wrapper {
+    .nav .navigation-wrapper {
         padding: 62px 20%;
     }
-    .cd-nav .cd-navigation-wrapper::after {
+    .nav .navigation-wrapper::after {
         clear: both;
         content: "";
         display: table;
     }
-    .cd-nav .cd-half-block {
+    .nav .half-block {
         width: 50%;
         float: left;
     }
-    .cd-nav .cd-primary-nav {
+    .nav .primary-nav {
         margin-top: 0;
     }
-    .cd-nav h2 {
+    .nav h2 {
         font-size: 1.5rem;
         margin-bottom: 5.6em;
     }
-    .cd-nav .cd-primary-nav li {
+    .nav .primary-nav li {
         margin: 2em 0;
     }
-    .cd-nav .cd-primary-nav a {
+    .nav .primary-nav a {
         font-size: 4.4rem;
     }
-    .cd-nav .cd-contact-info {
+    .nav .contact-info {
         margin-top: 120px;
         text-align: right;
     }
-    .cd-nav .cd-contact-info li {
+    .nav .contact-info li {
         margin-bottom: 2.4em;
     }
-    .cd-nav .cd-contact-info li,
-    .cd-nav .cd-contact-info a,
-    .cd-nav .cd-contact-info span {
+    .nav .contact-info li,
+    .nav .contact-info a,
+    .nav .contact-info span {
         font-size: 2rem;
     }
+}
+
+.team-info {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    /*visibility: hidden;*/
 }
 
 .no-js main {
@@ -419,12 +427,12 @@ main {
     overflow: visible;
 }
 
-.no-js .cd-nav {
+.no-js .nav {
     position: static;
     visibility: visible;
 }
 
-.no-js .cd-nav .cd-navigation-wrapper {
+.no-js .nav .navigation-wrapper {
     height: auto;
     overflow: visible;
     padding: 100px 5%;
