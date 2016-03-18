@@ -11,7 +11,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Poiret One', cursive;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #000000;
 }
 
@@ -110,7 +110,7 @@ main {
     top: 20px;
     height: 54px;
     width: 54px;
-    background-color: #090c17;
+    background-color: #090C17;
     border-radius: 50%;
     overflow: hidden;
     text-indent: 100%;
@@ -233,6 +233,7 @@ main {
 }
 
 .navigation-is-open .nav-trigger circle {
+    stroke-width:2;
     stroke-dashoffset: 0;
     -webkit-transition: stroke-dashoffset 0.4s 0.3s;
     -moz-transition: stroke-dashoffset 0.4s 0.3s;
@@ -253,7 +254,7 @@ main {
     height: 100vh;
     width: 100%;
     background-color: #090C17;
-    overflow-y: scroll;
+    overflow-y: hidden;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
     -moz-transition: visibility 0s 0.7s;
@@ -262,7 +263,7 @@ main {
 
 .nav .navigation-wrapper {
     height: 100%;
-    overflow-y: auto;
+    overflow-y: initial;
     -webkit-overflow-scrolling: touch;
     padding: 40px 5% 40px calc(5% + 80px);
     -webkit-transform: translateZ(0);
@@ -344,6 +345,11 @@ main {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .nav .contact-info {
@@ -416,10 +422,47 @@ main {
     z-index: 1;
     top: 0;
     left: 0;
-    height: 100vh;
+    /*height: 100vh;*/
+    display: table;
     width: 100%;
-    background-color: #ffffff;
-    /*visibility: hidden;*/
+    background-color: #02253B;
+}
+
+.team-info-body {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2em;
+    color: #ffffff;
+    padding: 10%;
+}
+
+.team-info-body h1 {
+    padding-bottom: 40px;
+    color: #ffffff;
+}
+
+.about-info {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /*height: 100vh;
+*/    display: table;
+    width: 100%;
+    background-color: #000000;
+}
+
+.about-info-body {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2em;
+    color: #ffffff;
+    padding: 10%;
+}
+
+.about-info-body h1 {
+    padding-bottom: 40px;
+    color: #ffffff;
 }
 
 .no-js main {
