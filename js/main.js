@@ -1,12 +1,21 @@
 jQuery(document).ready(function($) {
 
     $('#fullpage').fullpage({
-        anchors: ['MainNav', 'Team','About'],
-        scrollingSpeed: 1000,
+        anchors: ['MainNav', 'Team', 'About'],
+        scrollingSpeed: 800,
         scrollOverflow: true,
-        touchSensitivity: 1
-    });
+        scrollBar: false,
+        recordHistory: false,
+        touchSensitivity: 5,
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
 
+            if(index == 2){
+                $('.nav .half-block').css('padding-top','10%');
+            }
+        }
+    });
+    // $.fn.fullpage.moveTo(1);
     var isLateralNavAnimating = false;
     $('.nav-trigger').on('click', function(event) {
         event.preventDefault();

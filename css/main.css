@@ -112,7 +112,6 @@ main {
     width: 54px;
     background-color: #090C17;
     border-radius: 50%;
-    overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
     -webkit-transition: -webkit-transform 0.5s;
@@ -253,7 +252,7 @@ main {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: #090C17;
+    display: table;
     overflow-y: hidden;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
@@ -263,7 +262,8 @@ main {
 
 .nav .navigation-wrapper {
     height: 100%;
-    overflow-y: initial;
+    background-color: #090C17;
+    display: table-cell;
     -webkit-overflow-scrolling: touch;
     padding: 40px 5% 40px calc(5% + 80px);
     -webkit-transform: translateZ(0);
@@ -341,15 +341,18 @@ main {
     display: inline-block;
 }
 
+.no-touch .nav .primary-nav a:hover, .no-touch .nav .primary-nav a:active, .no-touch .nav .primary-nav a:visited  {
+    text-decoration: none;
+}
+
 .no-touch .nav .primary-nav a:hover {
     color: #ffffff;
-    text-decoration: none;
     cursor: pointer;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -ms-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .nav .contact-info {
@@ -387,6 +390,7 @@ main {
         display: table;
     }
     .nav .half-block {
+
         width: 50%;
         float: left;
     }
@@ -418,36 +422,36 @@ main {
 }
 
 .team-info {
-    position: relative;
-    z-index: 1;
+    position: absolute;
     top: 0;
     left: 0;
-    /*height: 100vh;*/
+    height: 100%;
     display: table;
     width: 100%;
-    background-color: #02253B;
+    background-color: rgb(2, 37, 59);
 }
 
 .team-info-body {
     display: table-cell;
     vertical-align: middle;
-    font-size: 2em;
+    font-size: 3vh;
     color: #ffffff;
-    padding: 10%;
+    padding: 5%;
 }
 
 .team-info-body h1 {
+    font-size: 5.9vh;
     padding-bottom: 40px;
     color: #ffffff;
 }
 
 .about-info {
-    position: relative;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    /*height: 100vh;
-*/    display: table;
+    height: 100%;
+    display: table;
     width: 100%;
     background-color: #000000;
 }
@@ -455,12 +459,13 @@ main {
 .about-info-body {
     display: table-cell;
     vertical-align: middle;
-    font-size: 2em;
+    font-size: 3vh;
     color: #ffffff;
-    padding: 10%;
+    padding: 5%;
 }
 
 .about-info-body h1 {
+    font-size: 5.9vh;
     padding-bottom: 40px;
     color: #ffffff;
 }
