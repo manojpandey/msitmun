@@ -7,6 +7,10 @@ jQuery(document).ready(function($) {
         return false;
     });
 
+    $(window).scroll(function(e){
+        parallax();
+    });
+
     var isLateralNavAnimating = false;
     $('.nav-trigger').on('click', function(event) {
         event.preventDefault();
@@ -21,6 +25,11 @@ jQuery(document).ready(function($) {
             });
         }
     });
+
+    function parallax() {
+        var scrolled = $(window).scrollTop();
+        $('img').css('top', -(scrolled * 0.2) + 'px');
+    }
 
     $(function() {
         if (navigator.userAgent.indexOf('Safari') != -1 &&
