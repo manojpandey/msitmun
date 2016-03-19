@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link rel="icon" href="#" type="image/icon">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" /> -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
@@ -42,67 +42,67 @@
             </div>
         </div>
     </main>
-    <a href="#fullpage" class="nav-trigger">Menu 
+    <a href="#nav" class="nav-trigger">Menu 
         <span class="nav-icon"></span>
+
         <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
             <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
         </svg>
     </a>
     <div id="nav" class="nav">
-        <div id="fullpage">
-            <div class="section navigation-wrapper row" id="section0">
-                <div class="half-block">
-                    <h2>Navigation</h2>
-                    <nav>
-                        <ul class="primary-nav" id="menu">
-                            <li><a data-menuanchor="firstPage" href="#Team">The Team</a></li>
-                            <li><a data-menuanchor="secondPage" href="#About">About</a></li>
-                            <li><a>Vision</a></li>
-                            <li><a>Justin Bieber</a></li>
-                            <li><a>Contact Us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="half-block">
-                    <address>
-                        <ul class="contact-info">
-                            <li><a href="mailto:someone@munmail.com">info@msitmun.co</a></li>
-                            <li>0244-12345678</li>
-                            <li>
-                                <span>C-4 Janakpuri</span>
-                                <span>MSIT</span>
-                                <span>New Delhi, India</span>
-                            </li>
-                        </ul>
-                    </address>
-                </div>
+        <div class="navigation-wrapper">
+            <div class="half-block">
+                <h2>Navigation</h2>
+                <nav>
+                    <ul class="primary-nav">
+                        <li><a href="#team">The Team</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a>Vision</a></li>
+                        <li><a>Justin Bieber</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="section team-info container" id="section1">
-                <div class="team-info-body row text-center">
-                    <h1>Team</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor apti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-                    </p>
-                </div>
-            </div>
-            <div class="section about-info container" id="section2">
-                <div class="about-info-body row text-center">
-                    <h1>About</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor apti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-                    </p>
-                </div>
+            <div class="half-block">
+                <address>
+                    <ul class="contact-info">
+                        <li><a href="mailto:someone@munmail.com">info@msitmun.co</a></li>
+                        <li>0244-12345678</li>
+                        <li>
+                            <span>C-4 Janakpuri</span>
+                            <span>MSIT</span>
+                            <span>New Delhi, India</span>
+                        </li>
+                    </ul>
+                </address>
             </div>
         </div>
+        <div class="team-info" id="team">
+            <div class="team-info-body row text-center">
+                <h1>Team</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor apti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
+                </p>
+            </div>
+        </div>
+        <div class="about-info" id="about">
+            <div class="about-info-body row text-center">
+                <h1>About</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor apti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
+                </p>
+            </div>
+        </div>
+    </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');
     </script>
     <script src="js/vendor/jquery.easings.min.js"></script>
+    <script src="js/vendor/jquery.windows.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery.slimscroll.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/vendor/particles.min.js"></script>
@@ -125,5 +125,4 @@
     ga('send', 'pageview');
     </script>
 </body>
-
-</html>
+</htm
