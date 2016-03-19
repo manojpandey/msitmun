@@ -1,4 +1,4 @@
-*,
+    *,
 *::after,
 *::before {
     -webkit-box-sizing: border-box;
@@ -24,8 +24,10 @@ ul {
     list-style-type: none;
 }
 
-a:hover, a:visited, a:link, a:active
-{
+a:hover,
+a:visited,
+a:link,
+a:active {
     text-decoration: none;
 }
 
@@ -237,7 +239,7 @@ main {
 }
 
 .navigation-is-open .nav-trigger circle {
-    stroke-width:2;
+    stroke-width: 2;
     stroke-dashoffset: 0;
     overflow-y: scroll;
     -webkit-transition: stroke-dashoffset 0.4s 0.3s;
@@ -268,6 +270,7 @@ main {
 .nav .navigation-wrapper {
     height: 100%;
     background-color: #090C17;
+    margin-bottom: -4em;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 40px 5% 40px calc(5% + 80px);
@@ -293,7 +296,8 @@ main {
 
 .navigation-is-open .nav {
     visibility: visible;
-    overflow-y: visible; /*Important*/
+    overflow-y: visible;
+    /*Important*/
     -webkit-transition: visibility 0s 0s;
     -moz-transition: visibility 0s 0s;
     transition: visibility 0s 0s;
@@ -347,7 +351,9 @@ main {
     display: inline-block;
 }
 
-.no-touch .nav .primary-nav a:hover, .no-touch .nav .primary-nav a:active, .no-touch .nav .primary-nav a:visited  {
+.no-touch .nav .primary-nav a:hover,
+.no-touch .nav .primary-nav a:active,
+.no-touch .nav .primary-nav a:visited {
     text-decoration: none;
 }
 
@@ -363,6 +369,7 @@ main {
 
 .nav .contact-info {
     margin-top: 80px;
+    visibility: hidden;
 }
 
 .nav .contact-info li {
@@ -415,6 +422,7 @@ main {
     .nav .contact-info {
         margin-top: 120px;
         text-align: right;
+        visibility: visible;
     }
     .nav .contact-info li {
         margin-bottom: 2.4em;
@@ -428,13 +436,17 @@ main {
 
 .team-info {
     position: relative;
-    z-index: 1000;
+    z-index: 5;
     top: 0;
     left: 0;
     height: 100%;
+    margin-bottom: -5em;
     display: table;
     width: 100%;
-    background-color: rgb(2, 37, 59);
+    background-color: #003a6f;
+    transform: skew(0deg, 8deg);
+    -ms-transform: skew(0deg, 8deg);
+    -webkit-transform: skew(0deg, 3deg);
 }
 
 .team-info-body {
@@ -443,6 +455,9 @@ main {
     font-size: 3vh;
     color: #ffffff;
     padding: 10%;
+    transform: skew(0deg, -8deg);
+    -ms-transform: skew(0deg, -8deg);
+    -webkit-transform: skew(0deg, -3deg);
 }
 
 .team-info-body h1 {
@@ -453,13 +468,20 @@ main {
 
 .about-info {
     position: relative;
-    z-index: 1;
+    z-index: 7;
     top: 0;
     left: 0;
     height: 100%;
     display: table;
     width: 100%;
-    background-color: #000000;
+    background-color: rgba(2, 37, 59, 1);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://www.civitas-stl.com/wp-content/uploads/2015/01/bigstock-Un-Flag-33396209.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: -5em;
+    transform: skew(0deg, -8deg);
+    -ms-transform: skew(0deg, -8deg);
+    -webkit-transform: skew(0deg, -3deg);
 }
 
 .about-info-body {
@@ -468,9 +490,44 @@ main {
     font-size: 3vh;
     color: #ffffff;
     padding: 10%;
+    transform: skew(0deg, 8deg);
+    -ms-transform: skew(0deg, 8deg);
+    -webkit-transform: skew(0deg, 3deg);
 }
 
 .about-info-body h1 {
+    font-size: 5.9vh;
+    padding-bottom: 40px;
+    color: #ffffff;
+}
+
+.vision-info {
+    position: relative;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: table;
+    width: 100%;
+    background-color: #010f18;
+    margin-bottom: -5em;
+    transform: skew(0deg, -8deg);
+    -ms-transform: skew(0deg, -8deg);
+    -webkit-transform: skew(0deg, -3deg);
+}
+
+.vision-info-body {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3vh;
+    color: #ffffff;
+    padding: 10%;
+    transform: skew(0deg,8deg);
+    -ms-transform: skew(0deg, 8deg);
+    -webkit-transform: skew(0deg, 3deg);
+}
+
+.vision-info-body h1 {
     font-size: 5.9vh;
     padding-bottom: 40px;
     color: #ffffff;
@@ -508,5 +565,4 @@ main {
     background-image: url("../Images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
-}
+    background-position: 50% 50%
