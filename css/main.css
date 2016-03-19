@@ -24,7 +24,7 @@ ul {
     list-style-type: none;
 }
 
-a:hover,
+
 a:visited,
 a:link,
 a:active {
@@ -575,3 +575,4 @@ main {
     background-size: cover;
     background-position: 50% 50%;
 }
+
