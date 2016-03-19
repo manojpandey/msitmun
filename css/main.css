@@ -472,7 +472,8 @@ main {
     background-image: repeating-linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../Images/AboutBack.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 60em;
+    background-size: cover 60em;
+    background-position: 50% 50%;
     margin-bottom: -5em;
     transform: skew(0deg, -8deg);
     -ms-transform: skew(0deg, -8deg);
@@ -569,5 +570,5 @@ main {
     background-image: url("../Images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 5
+    background-position: 50% 50%;
 }
