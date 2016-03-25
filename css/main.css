@@ -24,13 +24,27 @@ ul {
     list-style-type: none;
 }
 
+@keyframes translate{
+    0%{left: 0px;top:-200px;}
+    100%{left:0px;top: 0px;}
+
+}
+div{
+    animation-name:translate;
+    animation-duration:4s;
+}
+
 
 a:visited,
 a:link,
 a:active {
     text-decoration: none;
 }
+h1:hover,h2:hover,h5:hover{
+    color: yellow;
+    text-shadow: 1px 1px 2px lightyellow, 0 0 25px lightyellow, 0 0 5px yellow;
 
+}
 main {
     position: relative;
     z-index: 2;
