@@ -16,6 +16,7 @@ body {
 }
 
 html * {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -482,7 +483,7 @@ main {
     z-index: 7;
     top: 0;
     left: 0;
-    height: 120%;
+    height: 100%;
     display: table;
     width: 100%;
     /*background-color: rgba(2, 37, 59, 1);
@@ -491,10 +492,6 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    margin-bottom: -5em;
-    transform: skew(0deg, -8deg);
-    -ms-transform: skew(0deg, -8deg);
-    -webkit-transform: skew(0deg, -3deg);
 }
 
 .about-info-body {
@@ -504,9 +501,6 @@ main {
     color: #ffffff;
     padding: 10%;
     margin-bottom: 12%;
-    transform: skew(0deg, 8deg);
-    -ms-transform: skew(0deg, 8deg);
-    -webkit-transform: skew(0deg, 3deg);
 }
 
 .about-info-body p {
@@ -525,14 +519,10 @@ main {
     z-index: 7;
     top: 0;
     left: 0;
-    height: 120%;
+    height: 100%;
     display: table;
     width: 100%;
     background-color: #010f18;
-    margin-bottom: -5em;
-    transform: skew(0deg, -8deg);
-    -ms-transform: skew(0deg, -8deg);
-    -webkit-transform: skew(0deg, -3deg);
 }
 
 .vision-info-body {
@@ -541,9 +531,6 @@ main {
     font-size: 3vh;
     color: #ffffff;
     padding: 10%;
-    transform: skew(0deg, 8deg);
-    -ms-transform: skew(0deg, 8deg);
-    -webkit-transform: skew(0deg, 3deg);
 }
 
 .vision-info-body h1 {
