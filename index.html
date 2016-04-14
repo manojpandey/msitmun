@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link rel="icon" href="#" type="image/icon">
-    <link rel="stylesheet" href="css/cpage.css"> 
+    <link rel="stylesheet" href="css/cpage.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" /> -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -35,27 +35,26 @@
             <div class="intro-body row text-center">
                 <h1>MSIT MUN 2016</h1>
                 <h2>Coming this Fall !</h2>
-                <h2>Begins In</h2>
                 <div id="clockdiv">
                     <div>
                         <span class="months"></span>
-                        <div class="smalltext">Months</div>
+                        <div class="timer">Months</div>
                     </div>
                     <div>
                         <span class="days"></span>
-                        <div class="smalltext">Days</div>
+                        <div class="timer">Days</div>
                     </div>
                     <div>
                         <span class="hours"></span>
-                        <div class="smalltext">Hours</div>
+                        <div class="timer">Hours</div>
                     </div>
                     <div>
                         <span class="minutes"></span>
-                        <div class="smalltext">Minutes</div>
+                        <div class="timer">Minutes</div>
                     </div>
                     <div>
                         <span class="seconds"></span>
-                        <div class="smalltext">Seconds</div>
+                        <div class="timer">Seconds</div>
                     </div>
                 </div>
                 <ul class="list-inline">
@@ -67,7 +66,7 @@
             </div>
         </div>
     </main>
-    <a href="#nav" class="nav-trigger">Menu 
+    <a href="#nav" class="nav-trigger"> 
         <span class="nav-icon"></span>
 
         <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
@@ -76,30 +75,16 @@
     </a>
     <div id="nav" class="nav">
         <div class="navigation-wrapper">
-            <div class="half-block">
-                <h2>Navigation</h2>
-                <nav id="navbar">
-                    <ul class="primary-nav">
-                        <li><a href="#team"><i class="fa fa-group"></i> The Team</a></li>
-                        <li><a href="#about"><i class="fa fa-info-circle"></i> About</a></li>
-                        <li><a href="#vision"><i class="fa fa-eye"></i> Vision</a></li>
-                        <li><a href="#contactus"><i class="fa fa-mobile"></i> Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="half-block">
-                <address>
-                    <ul class="contact-info">
-                        <li><a href="mailto:someone@munmail.com">info@msitmun.co</a></li>
-                        <li>    </li>
-                        <li>
-                            <span>C-4 Janakpuri</span>
-                            <span>MSIT</span>
-                            <span>New Delhi, India</span>
-                        </li>
-                    </ul>
-                </address>
-            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="primary-nav">
+                <li><a href="#team">Committee</a></li>
+                <li><a href="#about">About MSIT</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="munimage-info" id="munimage">
         </div>
         <div class="team-info" id="team">
             <div class="team-info-body row text-center">
@@ -111,9 +96,9 @@
         </div>
         <div class="about-info" id="about">
             <div class="about-info-body row text-center">
-                <h1>About Us</h1>
+                <h1>About MSIT</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor apti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
+                    Maharaja Surajmal Institute of Technology is an AICTE approved Institute under GGSIP University and is located in the Institutional area of Janakpuri, New Delhi. Constantly ranked amongst the top engineering college in Delhi NCR, Maharaja Surajmal Institute’s campus comprises of well equipped fully air-conditioned laboratories and a well-stocked fully computerized library which provides an invigorating ambience and permits holistic development of students.
                 </p>
             </div>
         </div>
@@ -127,78 +112,87 @@
         </div>
         <div class="contactus-info" id="contactus">
             <div class="contactus-info-body row text-left">
-              <div class="container">
-                  <div class="row">
-                      <div class="container">
-                           <div class="row">
-                               <div class="col-md-12 col-sm-12 heading">
-                                  <br><br><br><br><h1 id="contactus">CONTACT US</h1>
-                               </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 heading">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 id="contactus">CONTACT US</h1>
+                                </div>
                             </div>
                         </div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-12 col-md-5"> 
+                                <div class="col-sm-12 col-md-5">
                                     <h2 class="base">For any further queries ,please write below.</h2>
                                     <form role="form">
-                                      <div class="form-group form-group-lg">
-                                          <input type="name" class="form-control" for="lg"  id="Name" placeholder="Your Name">
-                                      </div>
-                                      <div class="form-group form-group-lg"> 
-                                         <input type="email" class="form-control" id="Email" placeholder="Email">
-                                      </div>
-                                      <div class="form-group form-group-lg">
-                                        <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
-                                      </div>
-                                      <button type="submit" class="btn btn-primary">Submit</button>
+                                        <div class="form-group form-group-lg">
+                                            <input type="name" class="form-control" for="lg" id="Name" placeholder="Your Name">
+                                        </div>
+                                        <div class="form-group form-group-lg">
+                                            <input type="email" class="form-control" id="Email" placeholder="Email">
+                                        </div>
+                                        <div class="form-group form-group-lg">
+                                            <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
-                            <div class="vertical-line">
-                               <div class=" col-md-offset-2 col-md-5 col-sm-12">
-                                  <h1 class="headpart">OUR DETAILS:</h1>
-                                  <div>
-                                     <h3 class="c">EMAIL:</h3>
-                                        <p>xyz89@gmail.com</p><hr>
-                                        <h3 class="c" >PHONE:</h3>
-                                        <p>9975322367</p><hr>
-                                        <h3 class="c">OTHERS:</h3>
-                                        <p>xyz@yahoo.com</p>
-                                        <p> </p></p><hr>
-                                   </div>
+                                <div class="vertical-line">
+                                    <div class=" col-md-offset-2 col-md-5 col-sm-12">
+                                        <h1 class="headpart">OUR DETAILS:</h1>
+                                        <div>
+                                            <h3 class="c">EMAIL:</h3>
+                                            <p>xyz89@gmail.com</p>
+                                            <hr>
+                                            <h3 class="c">PHONE:</h3>
+                                            <p>9975322367</p>
+                                            <hr>
+                                            <h3 class="c">OTHERS:</h3>
+                                            <p>xyz@yahoo.com</p>
+                                            <p> </p>
+                                            </p>
+                                            <hr>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');
-    </script>
-    <script src="js/vendor/jquery.easings.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/vendor/particles.min.js"></script>
-    <script src="js/app.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function() {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-75029703-1', 'auto');
-    ga('send', 'pageview');
-    </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');
+        </script>
+        <script src="js/vendor/jquery.easings.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/vendor/particles.min.js"></script>
+        <script src="js/app.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-75029703-1', 'auto');
+        ga('send', 'pageview');
+        </script>
 </body>
+
 </html>
