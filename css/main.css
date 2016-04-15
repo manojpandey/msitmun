@@ -352,7 +352,7 @@ main {
 }
 
 .no-touch .nav .primary-nav a {
-    color: rgba(256,256,256,0.6);
+    color: rgba(256, 256, 256, 0.6);
     cursor: pointer;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
@@ -362,9 +362,8 @@ main {
 }
 
 #nav > nav > ul > li > a:hover {
-    color: rgba(256,256,256,1);
+    color: rgba(256, 256, 256, 1);
 }
-
 
 @media (max-width: 767px) {
     .nav .navbar {
@@ -502,7 +501,7 @@ main {
     width: 100%;
     /*background-color: rgba(2, 37, 59, 1);
 */
-    background-image:  repeating-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Images/msit.jpg');
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Images/msit.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -630,7 +629,7 @@ main {
     color: #ffd800;
 }
 
-.side-nav{
+.side-nav {
     position: fixed;
     z-index: 9999;
     right: 50px;
@@ -657,7 +656,105 @@ main {
     transition: 0.2s all linear;
 }
 
-.side-nav a:hover{
+.side-nav a:hover {
     background-color: white;
-} 
+}
 
+.foot {
+    position: relative;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    height: 30%;
+    display: table;
+    width: 100%;
+    background-color: black;
+}
+
+.footer-info-body {
+    text-align: center;
+    font-size: 3vh;
+    font-size: 5.9vh;
+    color: #FF522B;
+    font-weight: bold;
+    padding-top: 2%;
+    /*padding-bottom: 40px;*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.location {
+    position: relative;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    height: 40%;
+    display: table;
+    width: 100%;
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('http://4.bp.blogspot.com/-g9PxffWUrHo/UBzc5fq0iYI/AAAAAAAAANI/Alnanq_J30c/s640/msit-delhi.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.loc{
+    margin: 0 auto;
+    padding-top:2%;
+    
+}
+
+.wrapper-head > p{
+    font-size: 5vh;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 1200;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 5px;
+    font-family: "lato";
+    color:white;
+    padding-top: 4%;
+}
+.wrapper-head-details{
+padding-top:4%;
+}
+.wrapper-head-details{
+
+     font-size: 2vh;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 300;
+  
+    line-height: 1;
+    letter-spacing: 4px;
+    font-family: "lato";
+    color:white;
+    padding: 0 !important;
+}
+.wrapper-head-details >p{
+
+     font-size: 3vh;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 4px;
+    font-family: "lato";
+    color:white;
+    padding: 2%;
+}
+
+.wrapper-head-time{
+
+     font-size: 1.5vh;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 4px;
+    font-family: "lato";
+    color:white;
+    padding-top: 2%;
+}
