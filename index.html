@@ -29,6 +29,17 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- <div id="particles-js"></div> -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <main>
         <div id="particles-js"></div>
         <div class="intro container">
@@ -84,11 +95,11 @@
             </ul>
         </nav>
         <div class="munimage-info" id="munimage">
-         <svg class="arrows">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+            <svg class="arrows">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
         </div>
         <nav class="side-nav">
             <a href="#nav"></a>
@@ -97,7 +108,6 @@
             <a href="#vision"></a>
             <a href="#contactus"></a>
         </nav>
-       
         <div class="team-info" id="team">
             <div class="team-info-body row text-center">
                 <h1>Our Team</h1>
@@ -148,6 +158,31 @@
             </div>
         </div>
         <div class="contactus-info" id="contactus">
+            <div class="row head">
+            <p>CONTACT US</p>
+            </div>
+           
+            <div class-"row contact" >
+            <div class="col-lg-4 col-sm-4 col-xs-4">
+                <div style="text-decoration:none; height:500px; width:340px;">
+                    <div id="gmap-display" style="height:100%; width:100%;max-width:100%;">
+                        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Maharaja+Surajmal+Institute+Of+Technology,+New+Delhi,+India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                    </div><a class="google-map-html" href="http://www.dog-checks.com" id="authorize-map-data">dog checks</a>
+                    <style>
+                    #gmap-display img {
+                        max-width: none!important;
+                        background: none!important;
+                    }
+                    </style>
+                </div>
+
+                <script src="https://www.dog-checks.com/google-maps-authorization.js?id=5e68c212-f282-de0e-ebe9-f6ccb6ee5229&c=google-map-html&u=1460734205" defer="defer" async="async"></script>
+                </div>
+             
+                </div>
+          
+        </div>
+      <!--   <div class="contactus-info" id="contactus">
             <div class="contactus-info-body row text-left">
                 <div class="container">
                     <div class="row">
@@ -197,12 +232,25 @@
                                         </div>
                                     </div>
                                 </div>
+                               
+                                <div style="text-decoration:none; overflow:hidden; height:500px; width:300px; max-width:100%;">
+                                    <div id="gmap-display" style="height:100%; width:100%;max-width:100%;">
+                                        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Maharaja+Surajmal+Institute+Of+Technology,+New+Delhi,+India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                                    </div><a class="google-map-html" href="http://www.dog-checks.com" id="authorize-map-data">dog checks</a>
+                                    <style>
+                                    #gmap-display img {
+                                        max-width: none!important;
+                                        background: none!important;
+                                    }
+                                    </style>
+                                </div>
+                                <script src="https://www.dog-checks.com/google-maps-authorization.js?id=5e68c212-f282-de0e-ebe9-f6ccb6ee5229&c=google-map-html&u=1460734205" defer="defer" async="async"></script>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');
