@@ -629,3 +629,35 @@ main {
     font-size: 16px;
     color: #ffd800;
 }
+
+.side-nav{
+    position: fixed;
+    z-index: 9999;
+    right: 50px;
+    top: 50%;
+    width: 14px;
+    display: block;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.side-nav a {
+    display: block;
+    position: relative;
+    z-index: 9999;
+    color: transparent;
+    width: 14px;
+    height: 14px;
+    outline: none;
+    margin: 18px 0;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: 0.2s all linear;
+}
+
+.side-nav a:hover{
+    background-color: white;
+} 
+
