@@ -261,7 +261,7 @@ main {
     left: 0;
     height: 100vh;
     width: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
     -moz-transition: visibility 0s 0.7s;
@@ -342,30 +342,44 @@ main {
     float: right;
 }
 
-.nav .primary-nav li {
+.nav .primary-nav > li {
     display: inline-block;
     padding: 3vw;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.nav .primary-nav a {
-    color: #ffffff;
+.no-touch .nav .primary-nav a {
+    color: rgba(256,256,256,0.6);
+    cursor: pointer;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#nav > nav > ul > li > a:hover {
+    color: rgba(256,256,256,1);
 }
 
 
 @media (max-width: 767px) {
-    .navbar {
+    .nav .navbar {
         visibility: hidden;
-        margin-top: -50px;
+        margin-top: 12px;
+        height: 2px;
     }
-
+    .nav .primary-nav {
+        height: 4px;
+    }
     .munimage-info {
-        background-image: repeating-linear-gradient(to top,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('http://tomun.eu/wp-content/uploads/2014/09/UN_General_Assembly_hall.jpg');
+        background-image: repeating-linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('http://tomun.eu/wp-content/uploads/2014/09/UN_General_Assembly_hall.jpg');
     }
 }
+
 
 /*.nav .primary-nav {
     margin-top: 30px;
@@ -446,7 +460,7 @@ main {
     height: 83%;
     display: table;
     width: 100%;
-    background-image: repeating-linear-gradient(to top,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('http://tomun.eu/wp-content/uploads/2014/09/UN_General_Assembly_hall.jpg');
+    background-image: repeating-linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('http://tomun.eu/wp-content/uploads/2014/09/UN_General_Assembly_hall.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -460,7 +474,7 @@ main {
     height: 100%;
     display: table;
     width: 100%;
-    background-image: repeating-linear-gradient(to top,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+    background-image: repeating-linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
 }
 
 .team-info-body {
@@ -483,12 +497,12 @@ main {
     z-index: 7;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 10%;
     display: table;
     width: 100%;
     /*background-color: rgba(2, 37, 59, 1);
 */
-    background-image: repeating-linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../Images/AboutBack.jpg');
+    background-image:  repeating-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Images/msit.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -498,19 +512,19 @@ main {
 .about-info-body {
     display: table-cell;
     vertical-align: middle;
-    font-size: 3vh;
+    font-size: 2vh;
     color: #ffffff;
-    padding: 10%;
+    padding: 5%;
     margin-bottom: 12%;
 }
 
 .about-info-body p {
-    font-size: 24.84px;
+    font-size: 20.84px;
     padding-bottom: 40px;
 }
 
 .about-info-body h1 {
-    font-size: 5.9vh;
+    font-size: 4.9vh;
     color: #FF522B;
     font-weight: bold;
     padding-bottom: 40px;
