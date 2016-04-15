@@ -261,7 +261,7 @@ main {
     left: 0;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
     -moz-transition: visibility 0s 0.7s;
@@ -542,17 +542,21 @@ main {
 }
 
 .vision-info-body {
-    display: table-cell;
-    vertical-align: middle;
+    padding: 6%;
     font-size: 3vh;
     color: #ffffff;
-    padding: 10%;
+}
+
+.vision-info-body p {
+    font-family: "Georgia, serif";
+    font-style: italic;
 }
 
 .vision-info-body h1 {
     font-size: 5.9vh;
     color: #FF522B;
     font-weight: bold;
+    padding-top: 2%;
     padding-bottom: 40px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
