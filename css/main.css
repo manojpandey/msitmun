@@ -481,7 +481,7 @@ main {
     vertical-align: middle;
     font-size: 3vh;
     color: #ffffff;
-    padding: 10%;
+    padding: 2%;
 }
 
 .team-info-body h1 {
@@ -489,6 +489,91 @@ main {
     font-weight: bold;
     color: #FF522B;
     padding-bottom: 40px;
+}
+
+.team-list {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 100px auto;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.team-list li {
+    margin: 0%;
+    padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 500px) {
+    .team-list li {
+        float: left;
+        width: 50%;
+        clear: none;
+        margin: 0%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .team-list li {
+        width: 33%;
+        clear: none;
+    }
+}
+
+.avatar {
+    transform: scaleX(0.75);
+    -ms-transform: scaleX(0.75);
+    -webkit-transform: scaleX(0.75);
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 3em;
+}
+
+.avatar span,
+.avatar a {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 5px solid #888;
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 5px solid #fff;
+}
+
+.avatar img {
+    min-width: 100%;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px;
+    z-index: -4;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.avatar a:hover {
+    border-color: #e62b1e;
+}
+
+h3 {
+    margin: 0 0 1em 0;
+    font-weight: normal;
+    line-height: 1.4em;
+    text-rendering: optimizelegibility;
+}
+
+h3 span {
+    display: block;
+    border: none;
+    color: #9d9d9d;
+    font-size: 0.7em;
+    letter-spacing: 1px;
 }
 
 .about-info {
@@ -599,9 +684,11 @@ main {
 
 
 /* CSS FOR CLOCK TIMER*/
-#committee h1{
+
+#committee h1 {
     text-align: center;
 }
+
 #clockdiv {
     font-family: sans-serif;
     color: #ffd800;
