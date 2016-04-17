@@ -599,9 +599,9 @@ main {
 
 
 /* CSS FOR CLOCK TIMER*/
-#vision h1{
-    text-align:center; 
-} 
+#committee h1{
+    text-align: center;
+}
 #clockdiv {
     font-family: sans-serif;
     color: #ffd800;
