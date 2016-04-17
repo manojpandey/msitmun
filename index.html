@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/cpage.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" /> -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
 </head>
 
 <body>
@@ -69,9 +71,9 @@
                     </div>
                 </div>
                 <ul class="list-inline">
-                    <li><a href="#"><i class="fa fa-facebook fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
+                    <li><a href="https://www.facebook.com/MSITMUN/"><i class="fa fa-facebook fa-3x"></i></a></li>
+                    <li><a href="https://twitter.com/msitmun16"><i class="fa fa-twitter fa-3x"></i></a></li>
+                    <li><a href="https://www.instagram.com/msitmun16/"><i class="fa fa-instagram fa-3x"></i></a></li>
                 </ul>
                 <h5>Stay Tuned !</h5>
             </div>
@@ -88,7 +90,7 @@
         </div>
         <nav class="navbar">
             <ul class="primary-nav">
-                <li><a href="#team">Committee</a></li>
+                <li><a href="#team">Our Team</a></li>
                 <li><a href="#about">About MSIT</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#contactus">Contact Us</a></li>
@@ -135,7 +137,7 @@
         </div>
         <div class="vision-info" id="vision">
             <div class="vision-info-body row">
-                <h1>Secretariat’s message</h1>
+                <h1 style="text-align:center;">Secretariat’s message</h1>
                 <p>
                     "Dear Delegates,
                     <br>
@@ -149,13 +151,14 @@
         </div>
         <div class="location" id="location">
             <div class="row loc">
+                <div class="col-xs-12 col-sm-6">
                 <div class="wrapper-head">
-                    <p>LOCATION</p>
+                    <p style="padding:20px;">LOCATION</p>
                     <div class="wrapper-head-details">
-                        <p>
+                        <p style="padding:20px;">
                             MSIT MODEL UNITED NATIONS
                         </p>
-                        <i class="fa fa-location-arrow"></i> C-4 Janak Puri, New Delhi, Delhi 110058
+                        <p style="padding:20px;"><i class="fa fa-location-arrow"></i> C-4 Janak Puri, New Delhi, Delhi 110058</p>
                     </div>
                     <div class="wrapper-head-time">
                         <p>
@@ -163,27 +166,20 @@
                         </p>
                     </div>
                 </div>
+                    </div>
+                <div class="col-xs-12 col-sm-6">
+                
+                    <div id='map' style="width:400px; height:400px;"></div>
+                </div>
             </div>
+            
         </div>
         <div class="contactus-info" id="contactus">
             <div class="row head">
                 <p>CONTACT US</p>
             </div>
-            <div class- "row contact">
-                <div class="col-lg-4 col-sm-4 col-xs-4">
-                    <div style="text-decoration:none; height:500px; width:340px;">
-                        <div id="gmap-display" style="height:100%; width:100%;max-width:100%;">
-                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Maharaja+Surajmal+Institute+Of+Technology,+New+Delhi,+India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
-                        </div><a class="google-map-html" href="http://www.dog-checks.com" id="authorize-map-data">dog checks</a>
-                        <style>
-                        #gmap-display img {
-                            max-width: none!important;
-                            background: none!important;
-                        }
-                        </style>
-                    </div>
-                    <script src="https://www.dog-checks.com/google-maps-authorization.js?id=5e68c212-f282-de0e-ebe9-f6ccb6ee5229&c=google-map-html&u=1460734205" defer="defer" async="async"></script>
-                </div>
+            <div class="row contact">
+                
                 <div class="col-lg-4 col-sm-4 col-xs-4">
                     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMSITMUN&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </div>
@@ -285,6 +281,46 @@
         ga('create', 'UA-75029703-1', 'auto');
         ga('send', 'pageview');
         </script>
+        
+        <!-- Script for snazzy map--->
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 16,
+                    
+                    //to remove mouse scroll scaling
+                    scrollwheel: false,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(28.6207947,77.0925366), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"stylers":[{"saturation":100},{"gamma":0.6}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(28.6207947, 77.0925366),
+                    map: map,
+                    title: 'Maharaja Surajmal Institute Of Technology'
+                });
+            }
+        </script>
+
 </body>
 
 </html>
