@@ -526,33 +526,10 @@ main {
     margin: 0 auto 3em;
 }
 
-.avatar span,
 .avatar a {
-    height: 160px;
-    width: 160px;
-    border-radius: 50%;
-    border: 5px solid #888;
     display: block;
     overflow: hidden;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 5px solid #fff;
-    transition: all .5s ease-in-out;
-}
-
-.avatar img {
-    min-width: 100%;
-    width: 100px;
-    border-radius: 50%;
-    border: 5px;
-    z-index: -4;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-.avatar a:hover {
-    border-color: #e62b1e;
+    transition: all .5s ease-in;
 }
 
 h3 {
@@ -570,6 +547,108 @@ h3 span {
     letter-spacing: 1px;
 }
 
+.team-one-button {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 5px solid #888;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    background: url('https://help.github.com/assets/images/help/profile/identicon.png');
+    background-size: contain;
+}
+
+.sub-one {
+    position: absolute;
+    display: block;
+    top: 72px;
+    left: 72px;
+    background: #000;
+    height: 16px;
+    width: 16px;
+    opacity: 0;
+    border-radius: 50%;
+    -webkit-backface-visibility: hidden;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.sub-one span {
+    position: relative;
+    left: 62.4px;
+    top: -33.6px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sub-one.has-focus span {
+    visibility: visible;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.sub-one.sibling-has-focus,
+.sub-one.sibling-has-focus:before {
+    background: #000;
+    transition: opacity 300ms;
+    border-color: transparent;
+    z-index: 0;
+}
+
+.team-one-button.active {
+    border-color: #FF522B;
+}
+
+.team-one-button.active .sub-one {
+    opacity: 1;
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    transition: opacity 300ms, width 300ms, height 300ms, top 300ms cubic-bezier(0, 0.345, 0, 1.505), left 200ms cubic-bezier(0, 0.345, 0, 1.505);
+}
+
+.team-one-button.active .sub-one:hover {
+    color: #555;
+}
+
+.team-one-button.active .one {
+    top: -106.4px;
+    left: 56px;
+    background-color:#0085AE;
+}
+
+.team-one-button.active .two {
+    top: -84.64252557px;
+    left: 137.2px;
+    background-color: #3b5999;
+}
+
+.team-one-button.active .three {
+    top: -25.2px;
+    left: 196.64252557px;
+    background-color: #555555;
+}
+
+/*.team-one-button.active .four {
+    top: 56px;
+    left: 218.4px;
+}
+*/
+.sub-one:before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #888;
+    font-size: 41.28px;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.sub-one .fa {
+    color: #ffffff;
+    margin-top: 12px;
+}
 .about-info {
     position: relative;
     z-index: 7;

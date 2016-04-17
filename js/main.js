@@ -9,9 +9,6 @@ setInterval(function() {
 }, 4500);
 
 
-
-
-
 jQuery(document).ready(function($) {
 
     $('a').click(function() {
@@ -21,16 +18,33 @@ jQuery(document).ready(function($) {
         return false;
     });
 
-    // $(window).scroll(function() {
-    //     // checks if window is scrolled more than 500px, adds/removes solid class
-    //     if ($(this).scrollTop() > 100) {
-    //         $('.navbar').addClass('solid');
-    //     } else {
-    //         $('.navbar').removeClass('solid');
-    //     }
-    // });
 
-    
+    $('.team-one-button').mouseenter(function() {
+
+        $(this).addClass('active');
+
+    });
+
+
+    $('.avatar').mouseleave(function() {
+
+        $(this).children('.team-one-button').removeClass('active');
+
+    });
+
+    $('.sub-one').hover(function(el) {
+
+        $('.sub-one').not(this).addClass('sibling-has-focus');
+        $(this).addClass('has-focus');
+        //$(el).removeClass('sibling-has-focus');
+
+    }, function() {
+
+        $('.sub-one').removeClass('sibling-has-focus').removeClass('has-focus');
+
+    });
+
+
 
     var isLateralNavAnimating = false;
     $('.nav-trigger').on('click', function(event) {
