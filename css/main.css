@@ -484,13 +484,6 @@ main {
     padding: 2%;
 }
 
-.team-info-body h1 {
-    font-size: 5.9vh;
-    font-weight: bold;
-    color: #FF522B;
-    padding-bottom: 40px;
-}
-
 .team-list {
     width: 100%;
     text-align: center;
@@ -528,8 +521,8 @@ main {
     -ms-transform: scaleX(0.75);
     -webkit-transform: scaleX(0.75);
     display: block;
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto 3em;
 }
 
@@ -545,6 +538,7 @@ main {
     width: 100%;
     position: relative;
     border: 5px solid #fff;
+    transition: all .5s ease-in-out;
 }
 
 .avatar img {
@@ -563,7 +557,7 @@ main {
 
 h3 {
     margin: 0 0 1em 0;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.4em;
     text-rendering: optimizelegibility;
 }
