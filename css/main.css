@@ -1083,3 +1083,13 @@ h3 span {
     line-height: 1;
 
 }
+.foot{
+
+    text-align: center;
+     margin-top: 1%;
+    font-size: 2vh;
+    font-family: "Poiret One,Georgia, serif";
+    color: white;
+    font-weight: 800;
+    line-height: 1; 
+}
