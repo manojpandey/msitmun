@@ -9,7 +9,7 @@ h1{
 .heading
 {
   padding-top:45px;
-  font-family: arial;
+  font-family:'Poiret One', cursive;
 }
 .base{
    color:green;
@@ -43,7 +43,7 @@ input,textarea{ max-width:auto;}
 .c{
   color:red;
   font-size:30px;
-  font-family:arial;
+  font-family:'Poiret One', cursive;
 }
 
 p{ font-size:20px;}
