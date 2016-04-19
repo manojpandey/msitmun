@@ -553,7 +553,7 @@ h3 span {
     border: 5px solid #888;
     position: relative;
     -webkit-backface-visibility: hidden;
-    background: url('https://help.github.com/assets/images/help/profile/identicon.png');
+    background: url('https://help.github.com/assets/img/help/profile/identicon.png');
     background-size: contain;
 }
 
@@ -661,7 +661,7 @@ h3 span {
     width: 100%;
     /*background-color: rgba(2, 37, 59, 1);
 */
-    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Images/msit.jpg');
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/msit.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -751,7 +751,7 @@ h3 span {
     left: 0;
     top: 0;
     /*background-color: #216b62;*/
-    background-image: url('../Images/background.jpg');
+    background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -1009,7 +1009,7 @@ h3 span {
     position: relative;
 }
 
-#images {
+#img {
     width: 300%;
     height: 100%;
     margin: 0 auto;
@@ -1017,7 +1017,7 @@ h3 span {
     animation: slide 16s infinite ease-in-out alternate;
 }
 
-#images li {
+#img li {
     float: left;
     width: 33.33%;
     height: 100%;
