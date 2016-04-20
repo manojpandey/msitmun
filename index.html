@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -7,62 +7,308 @@
 <!--<![endif]-->
 
 <head>
+    <link rel="shortcut icon" href="img/favicon.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>MSIT MUN</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link rel="icon" href="#" type="image/icon">
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" /> -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 </head>
 
 <body>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div id="particles-js"></div>
-    <div class="intro container">
-        <div class="intro-body row text-center">
-            <h1>MSIT MUN 2016</h1>
-            <h2>Coming this Fall !</h2>
-            <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-facebook fa-3x"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-            </ul>
-            <h5>Stay Tuned !</h5>
+    <!-- <div id="particles-js"></div> -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <main>
+        <div id="particles-js"></div>
+        <div class="intro container">
+            <div class="intro-body row text-center">
+                <h1>MSIT MUN 2016</h1>
+                <h2>Coming this Fall !</h2>
+                <div id="clockdiv">
+                    <div>
+                        <span class="months"></span>
+                        <div class="timer">Months</div>
+                    </div>
+                    <div>
+                        <span class="days"></span>
+                        <div class="timer">Days</div>
+                    </div>
+                    <div>
+                        <span class="hours"></span>
+                        <div class="timer">Hours</div>
+                    </div>
+                    <div>
+                        <span class="minutes"></span>
+                        <div class="timer">Minutes</div>
+                    </div>
+                    <div>
+                        <span class="seconds"></span>
+                        <div class="timer">Seconds</div>
+                    </div>
+                </div>
+                <ul class="list-inline">
+                    <li><a href="https://www.facebook.com/MSITMUN/"><i class="fa fa-facebook fa-3x"></i></a></li>
+                    <li><a href="https://twitter.com/msitmun16"><i class="fa fa-twitter fa-3x"></i></a></li>
+                    <li><a href="https://www.instagram.com/msitmun16/"><i class="fa fa-instagram fa-3x"></i></a></li>
+                </ul>
+                <h5>Stay Tuned !</h5>
+            </div>
         </div>
-    </div>  
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/vendor/particles.min.js"></script>
-    <script src="js/app.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function() {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-75029703-1', 'auto');
-    ga('send', 'pageview');
-    </script>
+    </main>
+    <a href="#nav" class="nav-trigger">
+        <span class="nav-icon"></span>
+        <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+            <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+        </svg>
+    </a>
+    <div id="nav" class="nav">
+        <div class="navigation-wrapper">
+        </div>
+        <!-- <nav class="navbar">
+            <ul class="primary-nav">
+                <li><a href="#slider">Committee</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#about">About MSIT</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+            </ul>
+        </nav> -->
+        <div id="slider">
+            <div id="img">
+                <li style="background: repeating-linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('http://tomun.eu/wp-content/uploads/2014/09/UN_General_Assembly_hall.jpg');">
+                    <div class="committee-info" id="about">
+                        <div class="committee-info-body row text-center">
+                            <h1><b>UN GENERAL ASSEMBLY</b></h1>
+                            <p>
+                                <b>“Science has produced such powerful weapons that in a war between great powers there would be neither victor nor vanquished. Both would be overwhelmed in destruction.”</b>
+                                <br>
+                                <br> At the heart of the United Nations is the General Assembly and at MSIT MUN 2016, we will be simulating one of the principal committees of the General Assembly, DISEC, also known as the First Committee, which focuses mostly on matters that deal with conflict prevention, disarmament and international security. Since the beginning of international cooperation in the peaceful uses of nuclear energy, supplier countries have recognized the responsibility to ensure that arms trade in its current form doesn’t contribute to proliferation of nuclear weapons. Keeping this in mind at MSITMUN’16, delegates will be required to rethink what has been previous accepted, to push their skills of negotiation, and to ultimately balance international cooperation with their own national interest to make this world a more peaceful and secure place!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li style="background: repeating-linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('http://uwcrcn.no/wp-content/uploads/2016/02/01-2.jpg');">
+                    <div class="committee-info" id="about">
+                        <div class="committee-info-body row text-center">
+                            <h1>UN HUMAN RIGHTS COUNCIL</h1>
+                            <p>
+                                <b>“Human rights are women’s rights, and women’s rights are human rights.”</b>
+                                <br>
+                                <br> Only few know of the great impact the United Nations Human Rights Council has had in the promotion of international co-operation . It is not only the watchdog of the International Covenant on Civil and Political Rights, but also one of the key diplomatic forums working towards the universalization of Human Rights. The Universal Declaration of Human Rights establishes the right of women to equality as one of its unequivocal right and the end of the twentieth century saw an exponential development of Women’s rights by visionary and powerful global agreements. At MSITMUN’16, we invite you to evaluate this progress on gender equality, to identify new challenges, set global standards and formulate concrete policies to promote gender equality and advancement of women worldwide.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li style="background: repeating-linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('http://uwcrcn.no/wp-content/uploads/2016/02/04-1.jpg');">
+                    <div class="committee-info" id="about">
+                        <div class="committee-info-body row text-center">
+                            <h1>European Club Association</h1>
+                            <p>
+                                <b>"Some people believe football is a matter of life and death, I can assure you it is much, much more important than that." - <em>Bill Shankly.</em></b>
+                                <br>
+                                <br> The fourth committee to be simulated at the MSITMUN’16 is The European Club Association, which is a body representing the interests of association football clubs in UEFA. The rules of the game of football have not changed as massively over the last 140 years, as the spirit of the game has. The Spirit of the Game is an emphasis on sportsmanship, fun, respect-for-all and quality of play. Money tends to nurture greed in many parts of society and football is no different. Players don’t seem to be interested in playing for the shirt anymore, playing for the cheque book is the priority. At MSITMUN'16, we invite you to celebrate the spirit of the beautiful game as it has never been done before!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="vision-info" id="vision">
+            <div class="vision-info-body row">
+                <img src="img/quote.png" class="quote">
+                <h1>Secretariat’s message</h1>
+                <p>
+                    Dear Delegates,
+                    <br>
+                    <br>We are honoured in inviting you to the inaugural edition of Maharaja Surajmal Institute of Technology Model United Nations, to be held on the 13th and 14th of August 2016 at the MSIT Campus at MSITMUN ‘16. We aim to provide delegates with a challenging experience of negotiation and diplomacy by assuming the roles of UN representatives and members of other international decision-making bodies. Delegates from all over the country are invited to converge to confront and debate issues of international importance. MSITMUN expects to promote not just simple public speaking or a sense of international relations, but also skills such as diplomacy, public speaking, cooperation, negotiation, and compromise. A variety of committees and agendas will ensure engaging and thought-provoking experience for each and every delegate, ranging from the European Club Association to the United Nations General Assembly to address some of the most important issues of our time."
+                    <br>
+                    <br> Whether you have attended a Model United Nations Conference before or considering participating for the first time, we strongly encourage you to attend the conference to experience how Debate and Knowledge Sharing help in finding solutions for contemporary pressing issues, moreover how the aforementioned qualities bring change in how we think and look at those issues. MSITMUN ‘16 is an exciting opportunity to showcase your debating and negotiating skills, and we hope that you will choose to take part in it.
+                    <br>
+                    <br> Quoting Desmond Tutu, <i>"Don't raise your voice, improve your argument”, we must collectively think of improving our ability to reason and argue, and to put up a better fight for the cause"</i>
+                </p>
+            </div>
+        </div>
+        <div class="about-info" id="about">
+            <div class="about-info-body row text-center">
+                <h1>Maharaja Surajmal Institute of Technology</h1>
+                <p>
+                    Maharaja Surajmal Institute of Technology is an AICTE approved Institute under GGSIP University and is located in the Institutional area of Janakpuri, New Delhi.
+                    <br> Constantly ranked amongst the top engineering college in Delhi NCR, Maharaja Surajmal Institute’s campus comprises of well equipped fully air-conditioned laboratories and a well-stocked fully computerized library which provides an invigorating ambience and permits holistic development of students.
+                </p>
+            </div>
+        </div>
+        <div class="team-info" id="team">
+            <div class="team-info-body row text-center">
+                <ul class="team-list">
+                    <li>
+                        <div class="avatar">
+                            <div class="team-one-button">
+                                <a class="sub-one one"><i class="fa fa-linkedin"></i></a>
+                                <a class="sub-one two fb"><i class="fa fa-facebook"></i></a>
+                                <a class="sub-one three git"><i class="fa fa-github"></i></a>
+                                <!-- <a class="sub-one four ma"></a> -->
+                            </div>
+                        </div>
+                        <h3>
+                            Manoj Pandey<span>Description</span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <div class="team-one-button">
+                                <a class="sub-one one"><i class="fa fa-linkedin"></i></a>
+                                <a class="sub-one two fb"><i class="fa fa-facebook"></i></a>
+                                <a class="sub-one three git"><i class="fa fa-github"></i></a>
+                                <!-- <a class="sub-one four ma"></a> -->
+                            </div>
+                        </div>
+                        <h3>
+                            Ashish Gupta<span>Human</span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <div class="team-one-button">
+                                <a class="sub-one one"><i class="fa fa-linkedin"></i></a>
+                                <a class="sub-one two fb"><i class="fa fa-facebook"></i></a>
+                                <a class="sub-one three git"><i class="fa fa-github"></i></a>
+                                <!-- <a class="sub-one four ma"></a> -->
+                            </div>
+                        </div>
+                        <h3>
+                            Ayush Singh<span>Stud Boy</span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <div class="team-one-button">
+                                <a class="sub-one one"><i class="fa fa-linkedin"></i></a>
+                                <a class="sub-one two fb"><i class="fa fa-facebook"></i></a>
+                                <a class="sub-one three git"><i class="fa fa-github"></i></a>
+                                <!-- <a class="sub-one four ma"></a> -->
+                            </div>
+                        </div>
+                        <h3>
+                            Manoj Pandey<span>Description</span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <div class="team-one-button">
+                                <a class="sub-one one"><i class="fa fa-linkedin"></i></a>
+                                <a class="sub-one two fb"><i class="fa fa-facebook"></i></a>
+                                <a class="sub-one three git"><i class="fa fa-github"></i></a>
+                                <!-- <a class="sub-one four ma"></a> -->
+                            </div>
+                        </div>
+                        <h3>
+                            Manoj Pandey<span>Description</span>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <div class="team-one-button">
+                                <a class="sub-one one"><i class="fa fa-linkedin"></i></a>
+                                <a class="sub-one two fb"><i class="fa fa-facebook"></i></a>
+                                <a class="sub-one three git"><i class="fa fa-github"></i></a>
+                                <!-- <a class="sub-one four ma"></a> -->
+                            </div>
+                        </div>
+                        <h3>
+                            Manoj Pandey<span>Description</span>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="location" id="map">
+        </div>
+        <footer class="footer-distributed">
+            <div class="footer-left">
+                <h3>MSIT MUN<span>2016</span></h3>
+                <p class="footer-links">
+                    <a href="#slider">Committee</a> ·
+                    <a href="#vision">Vision</a> ·
+                    <a href="#about">About</a> ·
+                    <a href="#team">Team</a> ·
+                    <a href="#map">Find Us</a> 
+                  </p>
+                <p class="footer-company-name">MSIT MUN &copy; 2016</p>
+            </div>
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>C-4 Janak Puri</span> Delhi , India</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+91 882 6601301</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:contact@msitmun.com">contact@msitmun.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>Model United Nations</span> MUN is an educational simulation and academic competition in which students can learn about diplomacy, international relations, and the United Nations.
+                </p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/MSITMUN/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/msitmun16"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/msitmun16/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://github.com/manojpandey/msitmun/tree/develop"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>');
+        </script>
+        <script src="js/vendor/jquery.easings.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/vendor/particles.min.js"></script>
+        <script src="js/app.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-75029703-1', 'auto');
+        ga('send', 'pageview');
+        </script>
 </body>
 
 </html>
