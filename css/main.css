@@ -832,6 +832,21 @@ h3 span {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.quote {
+    position: absolute;
+    left: 4vw;
+    top: 18vh;
+    z-index: -11;
+}
+
+@media (max-width: 767px) {
+    .quote {
+        left: 4vw;
+        top: 10vh;
+        opacity: 0.8;
+    }
+}
+
 .no-js main {
     height: 100%;
     overflow: visible;
