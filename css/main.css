@@ -80,6 +80,34 @@ main {
     font-weight: bolder;
 }
 
+#clockdiv {
+    color: #ffd800;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div {
+    padding: 10px;
+    border-radius: 3px;
+    background: transparent;
+    display: inline-block;
+}
+
+#clockdiv div > span {
+    padding: 15px;
+    border-radius: 3px;
+    background: transparent;
+    display: inline-block;
+}
+
+.timer {
+    padding-top: 5px;
+    font-size: 16px;
+    color: #ffd800;
+}
+
 .list-inline {
     padding-top: 50px;
 }
@@ -261,7 +289,7 @@ main {
     left: 0;
     height: 100vh;
     width: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
     -moz-transition: visibility 0s 0.7s;
@@ -365,6 +393,70 @@ main {
     color: rgba(256, 256, 256, 1);
 }
 
+#slider {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#img {
+    width: 300%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    animation: slide 16s infinite ease-in-out alternate;
+}
+
+#img li {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    margin-left: 0px;
+    list-style: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    28% {
+        margin-left: 0;
+    }
+    33% {
+        margin-left: -100%;
+    }
+    61% {
+        margin-left: -100%;
+    }
+    66% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: -200%;
+    }
+}
+
+.committee-info-body {
+    padding: 10%;
+}
+
+.committee-info-body p {
+    font-size: 20.84px;
+    color: #fff;
+}
+
+.committee-info-body h1 {
+    font-size: 4.9vh;
+    color: #FF522B;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
 @media (max-width: 767px) {
     .nav .navbar {
         visibility: hidden;
@@ -374,8 +466,28 @@ main {
     .nav .primary-nav {
         height: 4px;
     }
-    .munimage-info {
-        background-image: repeating-linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('http://tomun.eu/wp-content/uploads/2014/09/UN_General_Assembly_hall.jpg');
+    .intro-body h2 {
+        display: none;
+        font-size: 0;
+    }
+    .intro-body h1 {
+        font-size: 44px;
+    }
+    #clockdiv div > span {
+        padding: 1px;
+    }
+    #clockdiv > span {
+        font-size: 10px;
+    }
+    .list-inline {
+        padding-top: 30px;
+    }
+    .committee-info-body p {
+        font-size: 12.84px;
+    }
+    .committee-info-body h1 {
+        float: right;
+        padding-bottom: 10px;
     }
 }
 
@@ -450,7 +562,8 @@ main {
 }
 */
 
-.munimage-info {
+
+/*.munimage-info {
     position: relative;
     z-index: 5;
     top: 0;
@@ -462,7 +575,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-}
+}*/
 
 .team-info {
     position: relative;
@@ -659,8 +772,7 @@ h3 span {
     height: 10%;
     display: table;
     width: 100%;
-    /*background-color: rgba(2, 37, 59, 1);
-*/
+    /*background-color: rgba(2, 37, 59, 1);*/
     background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/msit.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -758,42 +870,7 @@ h3 span {
 }
 
 
-/* CSS FOR CLOCK TIMER*/
-
-#committee h1 {
-    text-align: center;
-}
-
-#clockdiv {
-    font-family: 'Poiret One', cursive;
-    color: #ffd800;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 30px;
-}
-
-#clockdiv > div {
-    padding: 10px;
-    border-radius: 3px;
-    background: transparent;
-    display: inline-block;
-}
-
-#clockdiv div > span {
-    padding: 15px;
-    border-radius: 3px;
-    background: transparent;
-    display: inline-block;
-}
-
-.timer {
-    padding-top: 5px;
-    font-size: 16px;
-    color: #ffd800;
-}
-
-.side-nav {
+/*.side-nav {
     position: fixed;
     z-index: 9999;
     right: 50px;
@@ -822,170 +899,16 @@ h3 span {
 
 .side-nav a:hover {
     background-color: white;
-}
+}*/
 
-.foot {
-    position: relative;
-    z-index: 7;
-    top: 0;
-    left: 0;
-    height: 30%;
-    display: table;
+#map {
     width: 100%;
-    background-color: black;
-}
-
-.footer-info-body {
-    text-align: center;
-    font-size: 3vh;
-    font-size: 5.9vh;
-    color: #FF522B;
-    font-weight: bold;
-    padding-top: 2%;
-    /*padding-bottom: 40px;*/
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
- #map {
-   width: 100%;
-   height: 60%;
- }
-
-.wrapper-head > p {
-    font-size: 5vh;
-    text-align: center;
-    margin-bottom: 0px;
-    font-weight: 1200;
-    text-transform: uppercase;
-    line-height: 1;
-    letter-spacing: 5px;
-    font-family: 'Poiret One', cursive;
-    color: white;
-    padding-top: 4%;
-}
-
-.wrapper-head-details {
-    padding-top: 4%;
-}
-
-.wrapper-head-details {
-    font-size: 2vh;
-    text-align: center;
-    margin-bottom: 0px;
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: 4px;
-    font-family: 'Poiret One', cursive;
-    color: white;
-    padding: 0 !important;
-}
-
-.wrapper-head-details >p {
-    font-size: 3vh;
-    text-align: center;
-    margin-bottom: 0px;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 1;
-    letter-spacing: 4px;
-    font-family: 'Poiret One', cursive;
-    color: white;
-    padding: 2%;
-}
-
-.wrapper-head-time {
-    font-size: 1.5vh;
-    text-align: center;
-    margin-bottom: 0px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 4px;
-    font-family: 'Poiret One', cursive;
-    color: white;
-    padding-top: 2%;
-}
-
-
-.head > p {
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 4%;
-    font-size: 30px;
-    font-family: 'Poiret One', cursive;
-    color: white;
-    font-weight: 1200;
-    line-height: 1;
-    letter-spacing: 4px;
-}
-
-#slider {
-    height: 83%;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-#img {
-    width: 300%;
-    height: 100%;
-    margin: 0 auto;
-    position: absolute;
-    animation: slide 16s infinite ease-in-out alternate;
-}
-
-#img li {
-    float: left;
-    width: 33.33%;
-    height: 100%;
-    margin-left: 0px;
-    list-style: none;
-    /* Not Part of Slider */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-@keyframes slide {
-    0% {
-        margin-left: 0;
-    }
-    28% {
-        margin-left: 0;
-    }
-    33% {
-        margin-left: -100%;
-    }
-    61% {
-        margin-left: -100%;
-    }
-    66% {
-        margin-left: -200%;
-    }
-    100% {
-        margin-left: -200%;
-    }
-}
-
-.contactus-info {
-    position: relative;
-    z-index: 9;
-    top: 0;
-    left: 0;
-    height: 100%;
-    /* display: table;*/
-    width: 100%;
-    background-color: #010f18;
-}
-
-.contact {
-    padding-top: 4%;
+    height: 50%;
+    float: right;
 }
 
 .fd {
     padding-left: 30px !important;
-
 }
 
 .feed {
@@ -997,17 +920,184 @@ h3 span {
     color: white;
     font-weight: 1200;
     line-height: 1;
-
-}
-.foot{
-
-    text-align: center;
-     margin-top: 1%;
-    font-size: 2vh;
-    font-family: 'Poiret One', cursive;
-    color: white;
-    font-weight: 800;
-    line-height: 1; 
 }
 
+footer {
+    width: 100%;
+}
 
+footer h2 {
+    top: 3vh;
+    left: 3vw;
+}
+
+.form {
+    width: 100%;
+    height: 60%;
+    float: left;
+    background: #10283c;
+}
+
+
+/*#form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: #bbb5af;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: #bbb5af;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::placeholder,
+textarea::focus:placeholder {
+    color: #bbb5af;
+}
+
+input::-ms-placeholder,
+textarea::-ms-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
+    color: #bbb5af;
+}
+
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+    color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+    color: #cbc6c1;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+    color: #cbc6c1;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+    color: #cbc6c1;
+}
+
+input {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    border: solid 1px #b3aca7;
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    border: solid 1px #b3aca7;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+#submit {
+    width: 502px;
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    color: #b3aca7;
+    outline: none;
+    cursor: pointer;
+    border: solid 1px #b3aca7;
+    border-top: none;
+}
+
+#submit:hover {
+    color: #e2dedb;
+}
+
+*/ .copyright {
+    width: 100%;
+}
