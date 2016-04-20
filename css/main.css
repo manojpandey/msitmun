@@ -480,7 +480,7 @@ main {
     vertical-align: middle;
     font-size: 3vh;
     color: #ffffff;
-    padding: 2%;
+    padding: 1%;
 }
 
 .team-list {
@@ -532,7 +532,7 @@ main {
 }
 
 h3 {
-    margin: 0 0 1em 0;
+    margin: 0 0 0 0;
     font-weight: bold;
     line-height: 1.4em;
     text-rendering: optimizelegibility;
@@ -547,8 +547,8 @@ h3 span {
 }
 
 .team-one-button {
-    height: 160px;
-    width: 190px;
+    height: 150px;
+    width: 180px;
     border-radius: 50%;
     border: 5px solid #888;
     position: relative;
@@ -702,7 +702,7 @@ h3 span {
 
 .vision-info-body {
     padding: 6%;
-    font-size: 3vh;
+    font-size: 2.3vh;
     color: #ffffff;
 }
 
@@ -847,25 +847,10 @@ h3 span {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.location {
-    position: relative;
-    z-index: 7;
-    top: 0;
-    left: 0;
-    height: 50%;
-    display: table;
-    width: 100%;
-    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('http://4.bp.blogspot.com/-g9PxffWUrHo/UBzc5fq0iYI/AAAAAAAAANI/Alnanq_J30c/s640/msit-delhi.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.loc {
-    margin: 0 auto;
-    padding-top: 2%;
-}
+ #map {
+   width: 100%;
+   height: 60%;
+ }
 
 .wrapper-head > p {
     font-size: 5vh;
@@ -921,76 +906,8 @@ h3 span {
     padding-top: 2%;
 }
 
-.arrows {
-    width: 60px;
-    height: 72px;
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
-    bottom: 20px;
-}
 
-.arrows path {
-    /*stroke: #2994D1;*/
-    stroke: #ecf0f1;
-    fill: transparent;
-    stroke-width: 3px;
-    animation: arrow 2s infinite;
-    -webkit-animation: arrow 2s infinite;
-}
-
-@keyframes arrow {
-    0% {
-        opacity: 0
-    }
-    40% {
-        opacity: 1
-    }
-    80% {
-        opacity: 0
-    }
-    100% {
-        opacity: 0
-    }
-}
-
-@-webkit-keyframes arrow
-/*Safari and Chrome*/
-
-{
-    0% {
-        opacity: 0
-    }
-    40% {
-        opacity: 1
-    }
-    80% {
-        opacity: 0
-    }
-    100% {
-        opacity: 0
-    }
-}
-
-.arrows path.a1 {
-    animation-delay: -1s;
-    -webkit-animation-delay: -1s;
-    /* Safari 和 Chrome */
-}
-
-.arrows path.a2 {
-    animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s;
-    /* Safari 和 Chrome */
-}
-
-.arrows path.a3 {
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s;
-    /* Safari 和 Chrome */
-}
-
-.head>p {
+.head > p {
     text-align: center;
     margin-top: 3%;
     margin-bottom: 4%;
@@ -1092,3 +1009,5 @@ h3 span {
     font-weight: 800;
     line-height: 1; 
 }
+
+
