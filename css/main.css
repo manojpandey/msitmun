@@ -813,7 +813,7 @@ h3 span {
 }
 
 .vision-info-body {
-    padding: 6%;
+    padding: 10%;
     font-size: 2.3vh;
     color: #ffffff;
 }
@@ -821,6 +821,7 @@ h3 span {
 .vision-info-body p {
     font-family: 'Poiret One', cursive;
     font-style: italic;
+
 }
 
 .vision-info-body h1 {
