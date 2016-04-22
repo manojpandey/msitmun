@@ -59,6 +59,10 @@ main {
     right: 0;
 }
 
+.intro h2 {
+    font-weight: 600;
+}
+
 .safari .intro {
     height: 100%;
     width: 100%;
@@ -71,19 +75,20 @@ main {
     width: 100%;
     display: table-cell;
     vertical-align: middle;
-    color: #ffd800;
+    color: #dce9e7;
+    font-weight: bold;
 }
 
 .intro-body > h1 {
-    color: #ffd800;
+    color: #dce9e7;
     font-size: 60px;
     font-weight: bolder;
 }
 
 #clockdiv {
-    color: #ffd800;
+    color: #dce9e7;
     display: inline-block;
-    font-weight: 100;
+    font-weight: 600;
     text-align: center;
     font-size: 30px;
 }
@@ -105,7 +110,7 @@ main {
 .timer {
     padding-top: 5px;
     font-size: 16px;
-    color: #ffd800;
+    color: #ffffff;
 }
 
 .list-inline {
@@ -113,7 +118,7 @@ main {
 }
 
 .list-inline > li > a {
-    color: #ffd800;
+    color: #ffffff;
 }
 
 .list-inline > li:nth-child(1) > a:hover,
@@ -146,7 +151,7 @@ main {
     top: 20px;
     height: 54px;
     width: 54px;
-    background-color: #03202e;
+    background-color: #31A19F;
     border-radius: 50%;
     text-indent: 100%;
     white-space: nowrap;
@@ -731,7 +736,7 @@ h3 span {
     height: 100%;
     display: table;
     width: 100%;
-    background-color: #03202E;
+    background-color: #17465b;
 }
 
 .vision-info-body {
@@ -798,7 +803,7 @@ h3 span {
     height: 99.7%;
     left: 0;
     top: 0;
-    background-image: url('http://jessicadurrant.com/wordpress/wp-content/uploads/2011/11/World-Map-No.-61.jpg');
+    background-image: repeating-linear-gradient(rgba(3, 32, 46, 0.6), rgba(3, 0, 0, 0.4)),url('http://jessicadurrant.com/wordpress/wp-content/uploads/2011/11/World-Map-No.-61.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
