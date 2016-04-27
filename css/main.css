@@ -398,7 +398,8 @@ main {
     color: rgba(256, 256, 256, 1);
 }
 
-#slider {
+
+/*#slider {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -407,7 +408,7 @@ main {
 }
 
 #img {
-    width: 300%;
+    width: 400%;
     height: 100%;
     margin: 0 auto;
     position: absolute;
@@ -416,7 +417,7 @@ main {
 
 #img li {
     float: left;
-    width: 33.33%;
+    width: 25%;
     height: 100%;
     margin-left: 0px;
     list-style: none;
@@ -430,22 +431,41 @@ main {
     0% {
         margin-left: 0;
     }
-    28% {
+    8% {
         margin-left: 0;
     }
-    33% {
+    16% {
+        margin-left: 0;
+    }
+    25% {
         margin-left: -100%;
     }
-    61% {
+    32% {
         margin-left: -100%;
     }
-    66% {
+    40% {
+        margin-left: -100%;
+    }
+    50% {
         margin-left: -200%;
+    }
+    56% {
+        margin-left: -200%;
+    }
+    65% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    85% {
+        margin-left: -300%;
     }
     100% {
-        margin-left: -200%;
+        margin-left: -300%;
     }
 }
+*/
 
 .committee-info-body {
     padding: 10%;
@@ -803,7 +823,7 @@ h3 span {
     height: 99.7%;
     left: 0;
     top: 0;
-    background-image: repeating-linear-gradient(rgba(3, 32, 46, 0.6), rgba(3, 0, 0, 0.4)),url('http://jessicadurrant.com/wordpress/wp-content/uploads/2011/11/World-Map-No.-61.jpg');
+    background-image: repeating-linear-gradient(rgba(3, 32, 46, 0.6), rgba(3, 0, 0, 0.4)), url('http://jessicadurrant.com/wordpress/wp-content/uploads/2011/11/World-Map-No.-61.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -980,7 +1000,7 @@ h3 span {
 }
 
 footer .fa:hover {
-    color:  #0f9999;
+    color: #0f9999;
 }
 
 @media (max-width: 880px) {
@@ -1004,4 +1024,117 @@ footer .fa:hover {
     .footer-distributed .footer-right .footer-icons {
         text-align: center;
     }
+}
+
+.slides {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide-container {
+    display: block;
+}
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: all .7s ease-in-out;
+}
+
+.snav label {
+    width: 100px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .9s;
+    color: #ffffff;
+    font-size: 106pt;
+    text-align: center;
+    line-height: 680px;
+    font-family: "Varela Round", sans-serif;
+    text-shadow: rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label {
+    opacity: 0.5;
+}
+
+.snav label:hover {
+    opacity: 1;
+}
+
+.snav .next {
+    right: 0;
+}
+
+input:checked + .slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .snav label {
+    display: block;
+}
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(3, 32, 46, 0.4);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+    background: rgba(0, 0, 0, 0.8);
 }
