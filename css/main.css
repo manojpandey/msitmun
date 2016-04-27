@@ -1023,7 +1023,7 @@ footer .fa:hover {
     right: 0;
 }
 
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
     .snav label {
         opacity: 0;
     }
@@ -1033,7 +1033,7 @@ footer .fa:hover {
     .snav label:hover {
         opacity: 0;
     }
-}
+}*/
 
 input:checked + .slide-container .slide {
     opacity: 1;
@@ -1062,12 +1062,12 @@ input:checked + .slide-container .snav label {
     position: relative;
     border-radius: 100%;
     display: inline-block;
-    background-color: rgba(3, 32, 46, 0.4);
+    background-color: rgba(256, 256, 256, 0.4);
 }
 
 .nav-dots .nav-dot:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(256, 256, 256, 0.7);
 }
 
 input#img-1:checked ~ .nav-dots label#img-dot-1,
@@ -1076,5 +1076,5 @@ input#img-3:checked ~ .nav-dots label#img-dot-3,
 input#img-4:checked ~ .nav-dots label#img-dot-4,
 input#img-5:checked ~ .nav-dots label#img-dot-5,
 input#img-6:checked ~ .nav-dots label#img-dot-6 {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(256, 256, 256, 1);
 }
