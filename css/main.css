@@ -999,7 +999,7 @@ footer .fa:hover {
     height: 100%;
     display: none;
     position: absolute;
-    opacity: 0;
+    opacity: 0.3;
     z-index: 9;
     cursor: pointer;
     transition: opacity .9s;
