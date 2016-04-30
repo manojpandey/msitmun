@@ -25,6 +25,20 @@ function onInputBlur(event) {
     }
 };
 
+var i = 1;
+
+// function slideshow() {
+//     if (i <= 5) {
+//         $('#img-' + i).prop('checked', false);
+//         i = i + 1;
+//         $('#img-' + i).prop('checked', true);
+//     } else {
+//         i = 1;
+//     }
+//     console.log(i);
+//     setInterval(slideshow, 1000);
+// }
+
 jQuery(document).ready(function($) {
 
     $('a').click(function() {
@@ -33,6 +47,18 @@ jQuery(document).ready(function($) {
         }, 500);
         return false;
     });
+
+    function slideshow() {
+        if (i <= 5) {
+            // $('#img-' + i).prop('checked', false);
+            i = i + 1;
+            // $('#img-' + i).prop('checked', true);
+        } else {
+            i = 1;
+        }
+        console.log(i);
+        // slideshow();
+    }
 
     google.maps.event.addDomListener(window, 'load', init);
 

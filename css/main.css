@@ -1023,18 +1023,6 @@ footer .fa:hover {
     right: 0;
 }
 
-/*@media (max-width: 767px) {
-    .snav label {
-        opacity: 0;
-    }
-    .slide:hover + .nav label {
-        opacity: 0;
-    }
-    .snav label:hover {
-        opacity: 0;
-    }
-}*/
-
 input:checked + .slide-container .slide {
     opacity: 1;
     transform: scale(1);
