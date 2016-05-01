@@ -751,7 +751,7 @@ h3 span {
     height: 99.7%;
     left: 0;
     top: 0;
-    background-image: repeating-linear-gradient(rgba(3, 32, 46, 0.6), rgba(3, 0, 0, 0.4)), url('background.jpg');
+    background-image: repeating-linear-gradient(rgba(3, 32, 46, 0.6), rgba(3, 0, 0, 0.4)), url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
