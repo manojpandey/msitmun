@@ -5,31 +5,101 @@
 <!--[if gt IE 8]><!-->
 <html class=no-js>
 <!--<![endif]-->
-<link href=img/favicon.ico rel="shortcut icon">
-<meta charset=utf-8>
-<meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible>
-<title>MSIT MUN</title>
-<meta content="MSIT Model United Nations happening Fall'2016" name=description>
-<meta content="MUN, MSIT, 2016, model united nations, msitmun" name=keywords>
-<meta content="width=device-width,initial-scale=1" name=viewport>
-<meta content="MSIT Model United Nations happening Fall'2016" name=description>
-<meta content="Manoj Pandey" name=author>
-<meta content="" name=copyright>
-<meta content="" name=application-name>
-<meta content="MSIT Model United Nations happening Fall'2016" property=og:title>
-<meta content=article property=og:type>
-<meta content=http://msitmun.com/img/msit.jpg property=og:image>
-<meta content=http://msitmun.com property=og:url>
-<meta content="MSIT Model United Nations happening Fall'2016" property=og:description>
-<meta content="MSIT Model United Nations happening Fall'2016" name=twitter:card>
-<meta content="MSIT MUN 2016" name=twitter:title>
-<meta content="MSIT Model United Nations happening Fall'2016" name=twitter:description>
-<meta content=http://msitmun.com/img/msit.jpg name=twitter:image>
-<link href="#" rel="icon" type="image/icon">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poiret+One">
-<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<head>
+    <meta charset=utf-8>
+    <meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible>
+    <title>MSIT MUN</title>
+    <meta content="MSIT Model United Nations happening Fall'2016" name=description>
+    <meta content="MUN, MSIT, 2016, model united nations, msitmun" name=keywords>
+    <meta content="width=device-width,initial-scale=1" name=viewport>
+    <meta content="MSIT Model United Nations happening Fall'2016" name=description>
+    <meta content="Manoj Pandey" name=author>
+    <meta content="" name=copyright>
+    <meta content="" name=application-name>
+    <meta content="MSIT Model United Nations happening Fall'2016" property=og:title>
+    <meta content=article property=og:type>
+    <meta content=http://msitmun.com/img/msit.jpg property=og:image>
+    <meta content=http://msitmun.com property=og:url>
+    <meta content="MSIT Model United Nations happening Fall'2016" property=og:description>
+    <meta content="MSIT Model United Nations happening Fall'2016" name=twitter:card>
+    <meta content="MSIT MUN 2016" name=twitter:title>
+    <meta content="MSIT Model United Nations happening Fall'2016" name=twitter:description>
+    <meta content=http://msitmun.com/img/msit.jpg name=twitter:image>
+    <link href="#" rel="icon" type="image/icon">
+    <link href=img/favicon.ico rel="shortcut icon">
+    <script>
+    (function(w) {
+        "use strict";
+        var loadCSS = function(href, before, media) {
+            var doc = w.document;
+            var ss = doc.createElement("link");
+            var ref;
+            if (before) {
+                ref = before;
+            } else {
+                var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+                ref = refs[refs.length - 1];
+            }
+            var sheets = doc.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+
+            function ready(cb) {
+                if (doc.body) {
+                    return cb();
+                }
+                setTimeout(function() {
+                    ready(cb);
+                });
+            }
+            ready(function() {
+                ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+            });
+            var onloadcssdefined = function(cb) {
+                var resolvedHref = ss.href;
+                var i = sheets.length;
+                while (i--) {
+                    if (sheets[i].href === resolvedHref) {
+                        return cb();
+                    }
+                }
+                setTimeout(function() {
+                    onloadcssdefined(cb);
+                });
+            };
+
+            function loadCB() {
+                if (ss.addEventListener) {
+                    ss.removeEventListener("load", loadCB);
+                }
+                ss.media = media || "all";
+            }
+            if (ss.addEventListener) {
+                ss.addEventListener("load", loadCB);
+            }
+            ss.onloadcssdefined = onloadcssdefined;
+            onloadcssdefined(loadCB);
+            return ss;
+        };
+        if (typeof exports !== "undefined") {
+            exports.loadCSS = loadCSS;
+        } else {
+            w.loadCSS = loadCSS;
+        }
+    }(typeof global !== "undefined" ? global : this));
+    loadCSS("css/main.css");
+    loadCSS("css/bootstrap.min.css");
+    loadCSS("fonts/font-awesome/css/font-awesome.min.css");
+    loadCSS("https://fonts.googleapis.com/css?family=Poiret+One");
+
+    </script>
+<!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+</head>
 
 <body>
     <!--[if lt IE 8]><p class=browserupgrade>You are using an <strong>outdated</strong> browser. Please <a href=http://browsehappy.com/ >upgrade your browser</a> to improve your experience.<![endif]-->
